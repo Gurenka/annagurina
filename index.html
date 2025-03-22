@@ -3,124 +3,219 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consulting Services</title>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Anna Gurina - Business Consultant</title>
     <style>
-        body {
-            font-family: 'IBM Plex Sans', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #8ecae6;
-            color: #023047;
-        }
-        header {
-            background: #023047;
-            padding: 20px 40px;
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;600&display=swap');
+        body { 
+            font-family: 'IBM Plex Sans', sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            background-color: #f5f5f5; 
+            color: #333; 
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            left: 0;
-            color: white;
-            font-size: 18px;
-            font-weight: 600;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            flex-direction: column;
+            min-height: 100vh;
         }
-        nav a {
-            margin: 0 20px;
-            text-decoration: none;
-            color: white;
-            font-weight: 600;
+
+        .container { 
+            width: 90%; 
+            max-width: 1200px; 
+            margin: 0 auto; 
         }
-        .hero {
-            text-align: center;
-            padding: 180px 20px;
-            background: linear-gradient(to right, #219ebc, #023047);
-            color: white;
-            font-size: 24px;
-            font-weight: 600;
+
+        .hero { 
+            display: flex;
+            align-items: center; 
+            justify-content: center;
+            background-color: #8ecae6; 
+            padding: 80px 20px; 
+            text-align: left; 
+            margin-bottom: 60px; 
+            color: #023047; 
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
         }
-        .section {
-            padding: 100px 20px;
-            text-align: center;
-        }
-        .form-container {
-            background: #023047;
-            padding: 50px;
-            max-width: 640px;
-            margin: 0 auto;
-            border-radius: 15px;
-            color: white;
-        }
-        iframe {
-            width: 100%;
-            height: 800px;
-            border: none;
-        }
-        footer {
-            background: #023047;
-            color: white;
-            text-align: center;
-            padding: 25px;
-            font-size: 16px;
-        }
-        .profile-image {
-            width: 200px;
-            height: 200px;
+
+        .hero img {
             border-radius: 50%;
+            width: 250px; /* Adjust based on your image size */
+            height: 250px;
             object-fit: cover;
-            margin: 30px auto;
-            display: block;
-            border: 4px solid #ffb703;
+            margin-right: 40px;
         }
-        .highlight {
-            font-size: 26px;
+
+        .hero-text {
+            flex: 1;
+            text-align: left;
+        }
+
+        .hero h1 { 
+            font-size: 4rem; 
+            color: #023047; 
+            margin-bottom: 20px;
+        }
+
+        .hero p { 
+            font-size: 1.5em; 
+            color: #023047;
+            margin-bottom: 30px;
+        }
+
+        .cta-button { 
+            display: inline-block; 
+            margin-top: 20px; 
+            padding: 20px 40px; 
+            background-color: #219ebc; 
+            color: white; 
+            text-decoration: none; 
+            font-size: 1.2em;
             font-weight: bold;
-            color: #fb8500;
+            border-radius: 10px; 
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #fb8500;
+            transform: scale(1.1);
+        }
+
+        .section { 
+            padding: 60px 20px; 
+            text-align: center; 
+            background-color: white;
+            margin-bottom: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 { 
+            font-size: 3rem;
+            color: #023047; 
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .section p { 
+            color: #219ebc; 
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .case-studies div { 
+            margin-bottom: 30px; 
+            padding: 30px; 
+            background: #fb8500; 
+            border-radius: 10px; 
+            color: white; 
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .case-studies h3 { 
+            font-size: 2rem;
+            color: white; 
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .contact { 
+            text-align: center; 
+            padding: 60px 20px; 
+            background-color: #ffb703; 
+            color: #023047; 
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            margin-bottom: 60px;
+        }
+
+        .contact h2 { 
+            font-size: 2.5rem; 
+            font-weight: bold; 
+            margin-bottom: 20px; 
+        }
+
+        .contact p { 
+            font-size: 1.3em; 
+            margin-bottom: 15px; 
+        }
+
+        .contact a { 
+            text-decoration: none; 
+            color: #023047; 
+            font-weight: bold; 
+            font-size: 1.2em;
+        }
+
+        .linkedin-logo { 
+            width: 25px; 
+            vertical-align: middle; 
+            margin-right: 10px; 
+        }
+
+        /* Adding a background gradient to make the page more dynamic */
+        body {
+            background: linear-gradient(45deg, #ffb703, #fb8500, #8ecae6);
+            background-size: 300% 300%;
+            animation: gradientAnimation 5s ease infinite;
+        }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
     </style>
 </head>
 <body>
-    <header>
-        <h2>Consulting Services</h2>
-        <nav>
-            <a href="#about">About Me</a>
-            <a href="#why">Why Work With Me?</a>
-            <a href="#services">My Services</a>
-            <a href="#cases">Success Stories</a>
-            <a href="#testimonials">Testimonials</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
     <div class="hero">
-        <h1>SCALE. GROW. DOMINATE.</h1>
-        <p>Transform your tech company with strategies that deliver real results!</p>
-    </div>
-    <section id="about" class="section">
-        <h2>Meet Anna</h2>
-        <img src="https://drive.google.com/uc?export=view&id=1pc6Z4u5YyYn0TEg6SpZzvJmFBW_1txGl" alt="Anna Gurina" class="profile-image">
-        <p class="highlight">I help tech companies break barriers and scale FAST.</p>
-        <p>With 15+ years of expertise in business development, strategic partnerships, and SaaS growth, I’ve driven millions in revenue and built high-impact alliances across EMEA.</p>
-    </section>
-    <section id="why" class="section">
-        <h2>Why Work With Me?</h2>
-        <p><strong>Proven Success:</strong> I’ve scaled teams, optimized sales, and driven exponential revenue growth.</p>
-        <p><strong>Industry Expertise:</strong> Deep SaaS and GTM strategy knowledge to accelerate your business.</p>
-        <p><strong>Results-Oriented:</strong> Data-driven approach to deliver clear and measurable impact.</p>
-    </section>
-    <section id="contact" class="section">
-        <h2>Book a Free Consultation</h2>
-        <div class="form-container">
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScO4yK-hZv-ryi680bkbV0pLUU-3YbLMUyDCxOlN1wr0tw3oA/viewform?usp=header" allowfullscreen></iframe>
+        <img src="YOUR_IMAGE_URL" alt="Anna Gurina's Picture">
+        <div class="hero-text">
+            <h1>Anna Gurina. Business Consultant & Mentor</h1>
+            <p>Unlock your business potential. Achieve breakthrough growth. Let’s make it happen together!</p>
+            <a href="https://calendly.com/anyagurina" class="cta-button">Book a Free 15-Minute Call</a>
         </div>
-        <h3>Contact Me Directly</h3>
+    </div>
+    
+    <div class="container">
+        <div class="section about">
+            <h2>About Me</h2>
+            <p>Creating game-changing strategies that drive results. I empower tech leaders to expand globally, build impactful partnerships, and scale their sales with precision.</p>
+            <h3>Certifications</h3>
+            <p>[List key certifications here]</p>
+        </div>
+        
+        <div class="section case-studies">
+            <h2>Real Impact, Real Results</h2>
+            <div>
+                <h3>Go-To-Market Strategies & Scaling</h3>
+                <p>Delivered scalable GTM strategies that boosted sales by 150% in six months. Let’s turn your vision into growth!</p>
+            </div>
+            <div>
+                <h3>Strategic Partnerships & Sales Growth</h3>
+                <p>Forged key partnerships that doubled lead generation and drove an unprecedented 3x revenue growth. Imagine what’s possible for your business.</p>
+            </div>
+            <div>
+                <h3>Customer Success & Retention Strategies</h3>
+                <p>Implemented retention strategies that improved customer loyalty and reduced churn by 30%. Let’s build a loyal customer base together!</p>
+            </div>
+        </div>
+        
+        <div class="section cta">
+            <h2>Your business deserves to thrive</h2>
+            <a href="https://calendly.com/anyagurina" class="cta-button">Book your free call today</a>
+        </div>
+    </div>
+    
+    <div class="contact">
+        <h2>Let’s Connect!</h2>
         <p>Email: <a href="mailto:anyagurina@gmail.com">anyagurina@gmail.com</a></p>
-        <p>Phone: +357 96901140</p>
-    </section>
-    <footer>
-        <p>&copy; 2025 Consulting Services. Let’s build something BIG.</p>
-    </footer>
+        <p>Phone: <a href="tel:+35796901140">+357 96901140</a></p>
+        <p>
+            <a href="https://www.linkedin.com/in/anna-gurina/" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="linkedin-logo"> LinkedIn
+            </a>
+        </p>
+    </div>
 </body>
 </html>
